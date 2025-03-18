@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+h1 {
+    font-family: "Playfair Display";
+    font-size: 30px;
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+.cl {
+    clear: both;
+    display: block;
+}
+
+.field__header {
+    width: 1040px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.field-box {
+    border: 2px solid #d0d0d0;
+    border-top: none;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    float: left;
+}
+
+.new-game__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 1040px;
+    height: 624px;
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 40;
+}
+
+.new-game__text {
+    display: inline;
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.lose_text {
+    color: red;
+}
+
+.win_text {
+    color: green;
+}
+
+.new-game__btn {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    border: none;
+    font-family: "Playfair Display";
+    font-size: 50px;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+.field {
+    width: 1040px;
+    height: 624px;
+    display: grid;
+    grid-template-columns: repeat(40, 26px);
+    grid-template-rows: repeat(24, 26px);
+    position: relative;
+}
+
+.field .tile {
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    background-image: url('images/tile.png');
+    z-index: 20;
+    position: relative;
+}
+
+.field .wall {
+    background-size: 100%;
+    background-image: url('images/tile-W.png');
+}
+
+.field .enemy {
+    background-size: 100%;
+    background-image: url('images/tile-E.png');
+    z-index: 10;
+}
+
+.field .hero {
+    background-size: 100%;
+    background-image: url('images/tile-P.png');
+    z-index: 10;
+}
+
+.field .potion {
+    background-size: 100%;
+    background-image: url('images/tile-HP.png');
+    z-index: 9;
+}
+
+.field .sword {
+    background-size: 100%;
+    background-image: url('images/tile-SW.png');
+    z-index: 9;
+}
+
+.health {
+    background-color: #00ff00;
+    height: 3px;
+}
+
+.health-hero {
+    background-color: #00ff00;
+    z-index: 11;
+    height: 3px;
+}
+
+.alert__block {
+    text-align: right;
+}
+
+.alert-msg {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.hero-data {
+    float: right;
+    margin-right: 5%;
+}
+
+.hero-data h1:first-child {
+    padding: 0;
+}
+
+.inventory-box {
+    border: 2px solid #d0d0d0;
+    width: 150px;
+}
+
+.inventory {
+    position: relative;
+    width: 100px;
+    height: 32px;
+}
